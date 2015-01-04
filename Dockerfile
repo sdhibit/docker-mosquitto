@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-MAINTAINER Ansgar Schmidt <ansgar.schmidt@gmx.net>
+MAINTAINER Guido Schmutz <guido.schmutz@trivadis.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -9,8 +9,8 @@ RUN apt-get upgrade -y
 RUN apt-get install wget build-essential libwrap0-dev libssl-dev python-distutils-extra libc-ares-dev -y
 RUN mkdir -p /usr/local/src
 WORKDIR /usr/local/src
-RUN wget http://mosquitto.org/files/source/mosquitto-1.3.tar.gz
-RUN tar xvzf ./mosquitto-1.3.tar.gz
+RUN wget http://mosquitto.org/files/source/mosquitto-1.3.5.tar.gz
+RUN tar xvzf ./mosquitto-1.3.5.tar.gz
 WORKDIR /usr/local/src/mosquitto-1.3
 RUN make
 RUN make install
