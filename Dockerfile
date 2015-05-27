@@ -43,5 +43,5 @@ RUN set -x \
 ADD mosquitto.conf /etc/defaults/mosquitto/
 ADD mosquitto-service.sh /etc/service/mosquitto/run
 
-EXPOSE 1883 8080
+EXPOSE 1883 8080 8883
 VOLUME ["${APP_CONFIG}", "${APP_DATA}"]
